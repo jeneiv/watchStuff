@@ -76,7 +76,7 @@ extension WatchConnectivityService : WCSessionDelegate {
     }
     
     public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        
+        print("WatchConnectivityService -> Received Application Context:\n\(applicationContext)")
     }
 }
 

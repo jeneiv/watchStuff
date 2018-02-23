@@ -63,7 +63,7 @@
                     <items>
                         <label width="1" height="35" alignment="left" text="StarMan" textAlignment="center" id="rIW-8f-F03"/>
                         <imageView height="70" alignment="left" image="FlatEarth" contentMode="scaleAspectFill" id="HEV-b2-k04"/>
-                        <label width="1" alignment="left" text="Got fed up with epam and went to Mars instead." textAlignment="left" numberOfLines="0" id="97V-yD-qZm"/>
+                        <label width="1" alignment="left" text="Got fed up with Earth and went to Mars instead." textAlignment="left" numberOfLines="0" id="97V-yD-qZm"/>
                     </items>
                 </controller>
             </objects>
