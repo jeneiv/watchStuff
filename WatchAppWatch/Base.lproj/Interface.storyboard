@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="Main" id="AgC-eL-Hgc" customClass="MainInterfaceController" customModule="WatchAppWatch_Extension">
+                    <items>
+                        <table alignment="left" id="9Ml-9b-4Hi">
+                            <items>
+                                <tableRow identifier="MenuTableRow" id="F7C-ln-cUk" customClass="MenuTableRow" customModule="WatchAppWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="P7B-DB-e4M">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="title" id="UNH-sK-aS0"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="UNH-sK-aS0" id="Rns-tW-hLQ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="menuTable" destination="9Ml-9b-4Hi" id="QFy-2D-9po"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="6pY-6c-5m1">
+            <objects>
+                <notificationController id="vd1-st-Bgz">
+                    <items>
+                        <label width="1" alignment="left" text="titleLabel" textAlignment="center" id="zDZ-W8-9tU">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label width="1" alignment="left" text="alertLabel" textAlignment="center" id="s1f-EL-Sln"/>
+                        <imageView width="1" alignment="left" image="SpaceXHeavy" id="U7C-RN-jwY"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="i8U-r5-sYm"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="s1f-EL-Sln" id="TXx-rq-Pfr"/>
+                        <outlet property="notificationTitleLabel" destination="zDZ-W8-9tU" id="HRg-yk-M6V"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="164" y="360"/>
+        </scene>
+        <!--starman-->
+        <scene sceneID="B2M-S7-dqo">
+            <objects>
+                <controller identifier="starman" id="kr7-7O-9MD" customClass="StarmanInterfaceController" customModule="WatchAppWatch_Extension">
+                    <items>
+                        <label width="1" height="35" alignment="left" text="StarMan" textAlignment="center" id="rIW-8f-F03"/>
+                        <imageView height="70" alignment="left" image="FlatEarth" contentMode="scaleAspectFill" id="HEV-b2-k04"/>
+                        <label width="1" alignment="left" text="Got fed up with epam and went to Mars instead." textAlignment="left" numberOfLines="0" id="97V-yD-qZm"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="343" y="29"/>
+        </scene>
+    </scenes>
+</document>
