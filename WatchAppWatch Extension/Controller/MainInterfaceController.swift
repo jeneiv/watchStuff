@@ -26,6 +26,12 @@ final class MainInterfaceController : WKInterfaceController {
     override func willActivate() {
         super.willActivate()
         
+        do {
+            try WatchConnectivityService.sharedService.wcSession?.updateApplicationContext(WatchAppState.main.toContextDictionary())
+        }
+        catch let e {
+            print("Sending Context has failed with error: \(e)")
+        }
         print("Activating Main Interface Controller")
     }
     

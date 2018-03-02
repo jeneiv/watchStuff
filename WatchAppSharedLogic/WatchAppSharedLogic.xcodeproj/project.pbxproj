@@ -14,6 +14,9 @@
 		15AC737A203C682300A234DE /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC7379203C682300A234DE /* WatchConnectivityService.swift */; };
 		15AC737B203C682300A234DE /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC7379203C682300A234DE /* WatchConnectivityService.swift */; };
 		15AC737C203C682300A234DE /* WatchConnectivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC7379203C682300A234DE /* WatchConnectivityService.swift */; };
+		15C9BA43204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
+		15C9BA44204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
+		15C9BA45204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 		15AC736F203C67BA00A234DE /* WatchAppSharedLogic_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchAppSharedLogic_watchOS.h; sourceTree = "<group>"; };
 		15AC7370203C67BA00A234DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15AC7379203C682300A234DE /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
+		15C9BA42204974C7009EFECC /* WatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		15AC7349203C666E00A234DE /* WatchAppSharedLogic */ = {
 			isa = PBXGroup;
 			children = (
+				15C9BA41204974B3009EFECC /* Data */,
 				15AC7378203C681500A234DE /* Services */,
 				15AC734A203C666E00A234DE /* WatchAppSharedLogic.h */,
 				15AC734B203C666E00A234DE /* Info.plist */,
@@ -119,6 +124,14 @@
 				15AC7379203C682300A234DE /* WatchConnectivityService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		15C9BA41204974B3009EFECC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				15C9BA42204974C7009EFECC /* WatchState.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AC737A203C682300A234DE /* WatchConnectivityService.swift in Sources */,
+				15C9BA43204974C7009EFECC /* WatchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +295,7 @@
 			files = (
 				15AC737B203C682300A234DE /* WatchConnectivityService.swift in Sources */,
 				15AC7356203C666E00A234DE /* WatchAppSharedLogicTests.swift in Sources */,
+				15C9BA44204974C7009EFECC /* WatchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AC737C203C682300A234DE /* WatchConnectivityService.swift in Sources */,
+				15C9BA45204974C7009EFECC /* WatchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

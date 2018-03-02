@@ -46,6 +46,7 @@ extension WatchConnectivityService : WCSessionDelegate {
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         print("WatchConnectivityService -> activationDidComplete")
         isActive = true
+        print("Last Watch Context: \(session.applicationContext)")
     }
     
     #if os(iOS)
