@@ -41,6 +41,10 @@ final class MainViewController : UIViewController {
             print("Nor active, nor reachable")
         }
     }
+    
+    @IBAction func promiseButtonPressed(sender: UIButton) {
+        presenter.promiseTest()
+    }
 }
 
 extension MainViewController : MainView {

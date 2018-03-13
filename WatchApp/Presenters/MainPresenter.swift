@@ -8,6 +8,8 @@
 
 import Foundation
 import UserNotifications
+import WatchAppSharedLogic
+import PromiseKit
 
 final class MainPresenter : NSObject {
     weak var view : MainView?
@@ -17,6 +19,18 @@ final class MainPresenter : NSObject {
         notificationCenter = UNUserNotificationCenter.current()
         
         super.init()
+    }
+    
+    func promiseTest() {
+        firstly {
+            SpaceXLaunch.getUpcomingLaunches()
+        }
+        .done(on: DispatchQueue.main) { result in
+            print("Promise.done: \(result)")
+        }
+        .catch { error in
+            print("Promise.catch: \(error)")
+        }
     }
     
     func sendLiftOffNotification() {

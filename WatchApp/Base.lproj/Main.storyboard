@@ -28,12 +28,23 @@
                                     <action selector="liftOffButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qpo-q8-xk1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-G3-P4L">
+                                <rect key="frame" x="16" y="78" width="343" height="30"/>
+                                <state key="normal" title="Promise"/>
+                                <connections>
+                                    <action selector="promiseButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEw-pb-20Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WO0-G3-P4L" firstAttribute="height" secondItem="AfP-Sw-RLe" secondAttribute="height" id="8De-LR-Rl9"/>
+                            <constraint firstItem="WO0-G3-P4L" firstAttribute="leading" secondItem="AfP-Sw-RLe" secondAttribute="leading" id="LCC-vl-bDS"/>
                             <constraint firstItem="AfP-Sw-RLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="U5Q-Fh-HOk"/>
+                            <constraint firstItem="WO0-G3-P4L" firstAttribute="width" secondItem="AfP-Sw-RLe" secondAttribute="width" id="cBZ-oM-39D"/>
                             <constraint firstItem="AfP-Sw-RLe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fNL-BV-MwK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AfP-Sw-RLe" secondAttribute="trailing" constant="16" id="iQR-oM-dij"/>
+                            <constraint firstItem="WO0-G3-P4L" firstAttribute="top" secondItem="AfP-Sw-RLe" secondAttribute="bottom" constant="8" id="ifj-0p-Zbv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

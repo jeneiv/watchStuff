@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A1EDC42057F054006ED459 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */; };
+		15A1EDC52057F054006ED459 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */; };
+		15A1EDC92057F47F006ED459 /* URLRequest+SpaceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */; };
+		15A1EDCA2057F47F006ED459 /* URLRequest+SpaceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */; };
+		15A1EDD02057FDD0006ED459 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */; };
+		15A1EDD320580F72006ED459 /* SpaceXLaunch+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */; };
+		15A1EDD420580F72006ED459 /* SpaceXLaunch+Promises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */; };
+		15A1EDD6205815F3006ED459 /* SpaceXRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD5205815F3006ED459 /* SpaceXRocket.swift */; };
+		15A1EDD7205815F3006ED459 /* SpaceXRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD5205815F3006ED459 /* SpaceXRocket.swift */; };
+		15A1EDD8205815F3006ED459 /* SpaceXRocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD5205815F3006ED459 /* SpaceXRocket.swift */; };
+		15A1EDDA20581718006ED459 /* SpaceXLaunchSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD920581718006ED459 /* SpaceXLaunchSite.swift */; };
+		15A1EDDB20581718006ED459 /* SpaceXLaunchSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD920581718006ED459 /* SpaceXLaunchSite.swift */; };
+		15A1EDDC20581718006ED459 /* SpaceXLaunchSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDD920581718006ED459 /* SpaceXLaunchSite.swift */; };
+		15A1EDDE2058180F006ED459 /* SpaceXLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */; };
+		15A1EDDF2058180F006ED459 /* SpaceXLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */; };
+		15A1EDE02058180F006ED459 /* SpaceXLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */; };
 		15AC7351203C666E00A234DE /* WatchAppSharedLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15AC7347203C666E00A234DE /* WatchAppSharedLogic.framework */; };
 		15AC7356203C666E00A234DE /* WatchAppSharedLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC7355203C666E00A234DE /* WatchAppSharedLogicTests.swift */; };
 		15AC7358203C666E00A234DE /* WatchAppSharedLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 15AC734A203C666E00A234DE /* WatchAppSharedLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,6 +33,8 @@
 		15C9BA43204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
 		15C9BA44204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
 		15C9BA45204974C7009EFECC /* WatchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9BA42204974C7009EFECC /* WatchState.swift */; };
+		37BEEC0E425F3D7F040532D0 /* Pods_WatchAppSharedLogic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E1D7347923CD0BE3F326E9 /* Pods_WatchAppSharedLogic.framework */; };
+		A22399C76E7F9BC32FA5D16F /* Pods_WatchAppSharedLogicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A53FA3EB470209F7EBB531D /* Pods_WatchAppSharedLogicTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4DF7628220B66507EBCB83 /* Pods-WatchAppSharedLogic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchAppSharedLogic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WatchAppSharedLogic/Pods-WatchAppSharedLogic.debug.xcconfig"; sourceTree = "<group>"; };
+		15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunch.swift; sourceTree = "<group>"; };
+		15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+SpaceX.swift"; sourceTree = "<group>"; };
+		15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpaceXLaunch+Promises.swift"; sourceTree = "<group>"; };
+		15A1EDD5205815F3006ED459 /* SpaceXRocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXRocket.swift; sourceTree = "<group>"; };
+		15A1EDD920581718006ED459 /* SpaceXLaunchSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunchSite.swift; sourceTree = "<group>"; };
+		15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLinks.swift; sourceTree = "<group>"; };
 		15AC7347203C666E00A234DE /* WatchAppSharedLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchAppSharedLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15AC734A203C666E00A234DE /* WatchAppSharedLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchAppSharedLogic.h; sourceTree = "<group>"; };
 		15AC734B203C666E00A234DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +66,11 @@
 		15AC7370203C67BA00A234DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15AC7379203C682300A234DE /* WatchConnectivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityService.swift; sourceTree = "<group>"; };
 		15C9BA42204974C7009EFECC /* WatchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchState.swift; sourceTree = "<group>"; };
+		2A53FA3EB470209F7EBB531D /* Pods_WatchAppSharedLogicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchAppSharedLogicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53E1D7347923CD0BE3F326E9 /* Pods_WatchAppSharedLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchAppSharedLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD89BAA24CB55A80DCA6F80B /* Pods-WatchAppSharedLogicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchAppSharedLogicTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WatchAppSharedLogicTests/Pods-WatchAppSharedLogicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B91B39183B417DFFA41F69DE /* Pods-WatchAppSharedLogicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchAppSharedLogicTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WatchAppSharedLogicTests/Pods-WatchAppSharedLogicTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2263EA6E87F6A26A78F1034 /* Pods-WatchAppSharedLogic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchAppSharedLogic.release.xcconfig"; path = "../Pods/Target Support Files/Pods-WatchAppSharedLogic/Pods-WatchAppSharedLogic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BEEC0E425F3D7F040532D0 /* Pods_WatchAppSharedLogic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AC7351203C666E00A234DE /* WatchAppSharedLogic.framework in Frameworks */,
+				A22399C76E7F9BC32FA5D16F /* Pods_WatchAppSharedLogicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +101,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15A1EDC22057DE77006ED459 /* SpaceX */ = {
+			isa = PBXGroup;
+			children = (
+				15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */,
+				15A1EDD5205815F3006ED459 /* SpaceXRocket.swift */,
+				15A1EDD920581718006ED459 /* SpaceXLaunchSite.swift */,
+				15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */,
+				15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */,
+			);
+			path = SpaceX;
+			sourceTree = "<group>";
+		};
+		15A1EDC72057F459006ED459 /* SpaceX */ = {
+			isa = PBXGroup;
+			children = (
+				15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */,
+			);
+			path = SpaceX;
+			sourceTree = "<group>";
+		};
 		15AC733D203C666E00A234DE = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +128,8 @@
 				15AC7354203C666E00A234DE /* WatchAppSharedLogicTests */,
 				15AC736E203C67BA00A234DE /* WatchAppSharedLogic-watchOS */,
 				15AC7348203C666E00A234DE /* Products */,
+				A2A61ADE69A34166C6BD0578 /* Pods */,
+				F4C85EBE2DED12234107448C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +175,7 @@
 		15AC7378203C681500A234DE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				15A1EDC72057F459006ED459 /* SpaceX */,
 				15AC7379203C682300A234DE /* WatchConnectivityService.swift */,
 			);
 			path = Services;
@@ -129,9 +184,30 @@
 		15C9BA41204974B3009EFECC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				15A1EDC22057DE77006ED459 /* SpaceX */,
 				15C9BA42204974C7009EFECC /* WatchState.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		A2A61ADE69A34166C6BD0578 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F4DF7628220B66507EBCB83 /* Pods-WatchAppSharedLogic.debug.xcconfig */,
+				D2263EA6E87F6A26A78F1034 /* Pods-WatchAppSharedLogic.release.xcconfig */,
+				AD89BAA24CB55A80DCA6F80B /* Pods-WatchAppSharedLogicTests.debug.xcconfig */,
+				B91B39183B417DFFA41F69DE /* Pods-WatchAppSharedLogicTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4C85EBE2DED12234107448C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53E1D7347923CD0BE3F326E9 /* Pods_WatchAppSharedLogic.framework */,
+				2A53FA3EB470209F7EBB531D /* Pods_WatchAppSharedLogicTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15AC735B203C666E00A234DE /* Build configuration list for PBXNativeTarget "WatchAppSharedLogic" */;
 			buildPhases = (
+				BEDEC092146AD9BE24B786DB /* [CP] Check Pods Manifest.lock */,
 				15AC7342203C666E00A234DE /* Sources */,
 				15AC7343203C666E00A234DE /* Frameworks */,
 				15AC7344203C666E00A234DE /* Headers */,
 				15AC7345203C666E00A234DE /* Resources */,
+				FBC43B2F69E72375139CFA36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15AC735E203C666E00A234DE /* Build configuration list for PBXNativeTarget "WatchAppSharedLogicTests" */;
 			buildPhases = (
+				C96D06DFBDB995787A655B74 /* [CP] Check Pods Manifest.lock */,
 				15AC734C203C666E00A234DE /* Sources */,
 				15AC734D203C666E00A234DE /* Frameworks */,
 				15AC734E203C666E00A234DE /* Resources */,
+				4EEF7D7A84A3A6378B18683D /* [CP] Embed Pods Frameworks */,
+				BF8A3FC3AD5551F95E7D8BEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,12 +360,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4EEF7D7A84A3A6378B18683D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-WatchAppSharedLogicTests/Pods-WatchAppSharedLogicTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WatchAppSharedLogicTests/Pods-WatchAppSharedLogicTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEDEC092146AD9BE24B786DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchAppSharedLogic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF8A3FC3AD5551F95E7D8BEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WatchAppSharedLogicTests/Pods-WatchAppSharedLogicTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C96D06DFBDB995787A655B74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchAppSharedLogicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC43B2F69E72375139CFA36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-WatchAppSharedLogic/Pods-WatchAppSharedLogic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15AC7342203C666E00A234DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A1EDD320580F72006ED459 /* SpaceXLaunch+Promises.swift in Sources */,
+				15A1EDDE2058180F006ED459 /* SpaceXLinks.swift in Sources */,
+				15A1EDD6205815F3006ED459 /* SpaceXRocket.swift in Sources */,
 				15AC737A203C682300A234DE /* WatchConnectivityService.swift in Sources */,
+				15A1EDC92057F47F006ED459 /* URLRequest+SpaceX.swift in Sources */,
+				15A1EDDA20581718006ED459 /* SpaceXLaunchSite.swift in Sources */,
+				15A1EDC42057F054006ED459 /* SpaceXLaunch.swift in Sources */,
 				15C9BA43204974C7009EFECC /* WatchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,9 +467,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A1EDD420580F72006ED459 /* SpaceXLaunch+Promises.swift in Sources */,
+				15A1EDCA2057F47F006ED459 /* URLRequest+SpaceX.swift in Sources */,
 				15AC737B203C682300A234DE /* WatchConnectivityService.swift in Sources */,
 				15AC7356203C666E00A234DE /* WatchAppSharedLogicTests.swift in Sources */,
+				15A1EDC52057F054006ED459 /* SpaceXLaunch.swift in Sources */,
+				15A1EDDB20581718006ED459 /* SpaceXLaunchSite.swift in Sources */,
+				15A1EDD7205815F3006ED459 /* SpaceXRocket.swift in Sources */,
 				15C9BA44204974C7009EFECC /* WatchState.swift in Sources */,
+				15A1EDDF2058180F006ED459 /* SpaceXLinks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +484,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AC737C203C682300A234DE /* WatchConnectivityService.swift in Sources */,
+				15A1EDDC20581718006ED459 /* SpaceXLaunchSite.swift in Sources */,
+				15A1EDD8205815F3006ED459 /* SpaceXRocket.swift in Sources */,
+				15A1EDD02057FDD0006ED459 /* SpaceXLaunch.swift in Sources */,
 				15C9BA45204974C7009EFECC /* WatchState.swift in Sources */,
+				15A1EDE02058180F006ED459 /* SpaceXLinks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +618,7 @@
 		};
 		15AC735C203C666E00A234DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F4DF7628220B66507EBCB83 /* Pods-WatchAppSharedLogic.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -457,6 +642,7 @@
 		};
 		15AC735D203C666E00A234DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2263EA6E87F6A26A78F1034 /* Pods-WatchAppSharedLogic.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -479,8 +665,9 @@
 		};
 		15AC735F203C666E00A234DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD89BAA24CB55A80DCA6F80B /* Pods-WatchAppSharedLogicTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39ZV5RL4WB;
 				INFOPLIST_FILE = WatchAppSharedLogicTests/Info.plist;
@@ -494,8 +681,9 @@
 		};
 		15AC7360203C666E00A234DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91B39183B417DFFA41F69DE /* Pods-WatchAppSharedLogicTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39ZV5RL4WB;
 				INFOPLIST_FILE = WatchAppSharedLogicTests/Info.plist;
