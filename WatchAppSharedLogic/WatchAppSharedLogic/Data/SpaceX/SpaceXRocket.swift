@@ -19,3 +19,9 @@ public struct SpaceXRocket : Codable {
         case rocketType = "rocket_type"
     }
 }
+
+extension SpaceXRocket : Equatable {
+    public static func ==(lhs: SpaceXRocket, rhs: SpaceXRocket) -> Bool {
+        return lhs.rocketID == rhs.rocketID && lhs.rocketName == rhs.rocketName && lhs.rocketType == rhs.rocketType
+    }
+}

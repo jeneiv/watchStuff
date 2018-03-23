@@ -30,9 +30,16 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WO0-G3-P4L">
                                 <rect key="frame" x="16" y="78" width="343" height="30"/>
-                                <state key="normal" title="Promise"/>
+                                <state key="normal" title="Fetch next Launch"/>
                                 <connections>
-                                    <action selector="promiseButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nEw-pb-20Z"/>
+                                    <action selector="fetchNextLaunchButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v88-9k-LBJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGa-4c-SmM">
+                                <rect key="frame" x="16" y="116" width="343" height="30"/>
+                                <state key="normal" title="Check Stored Next Launch"/>
+                                <connections>
+                                    <action selector="checkStoredNextLaunchDataWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k8Q-W3-KjC"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -45,6 +52,10 @@
                             <constraint firstItem="AfP-Sw-RLe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fNL-BV-MwK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AfP-Sw-RLe" secondAttribute="trailing" constant="16" id="iQR-oM-dij"/>
                             <constraint firstItem="WO0-G3-P4L" firstAttribute="top" secondItem="AfP-Sw-RLe" secondAttribute="bottom" constant="8" id="ifj-0p-Zbv"/>
+                            <constraint firstItem="oGa-4c-SmM" firstAttribute="top" secondItem="WO0-G3-P4L" secondAttribute="bottom" constant="8" id="ktY-jv-Gpz"/>
+                            <constraint firstItem="oGa-4c-SmM" firstAttribute="height" secondItem="AfP-Sw-RLe" secondAttribute="height" id="qv6-2H-yJ0"/>
+                            <constraint firstItem="oGa-4c-SmM" firstAttribute="width" secondItem="AfP-Sw-RLe" secondAttribute="width" id="tig-8X-W80"/>
+                            <constraint firstItem="oGa-4c-SmM" firstAttribute="leading" secondItem="AfP-Sw-RLe" secondAttribute="leading" id="xKN-Eb-9vR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

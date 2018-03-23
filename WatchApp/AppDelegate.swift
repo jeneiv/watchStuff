@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    private static let BackgroundRefreshMinimumInterval : TimeInterval = 60.0 * 60.0
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,7 +22,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Kick off WatchConnectivity
         let _ = WatchConnectivityService.sharedService
         
+        // Set up Background fetch
+        UIApplication.shared.setMinimumBackgroundFetchInterval(AppDelegate.BackgroundRefreshMinimumInterval)
+        
         return true
+    }
+    
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("Background Fetch -> Start")
+        FetchNextLaunchBackgroundTask.fetchNextLaunch().done { (backgroundfetchResult : UIBackgroundFetchResult) in
+            completionHandler(backgroundfetchResult)
+        }
+        .catch { (error : Error) in
+                completionHandler(.failed)
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

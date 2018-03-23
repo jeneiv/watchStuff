@@ -1,5 +1,5 @@
 //
-//  Launch.swift
+//  SpaceXLaunch.swift
 //  WatchAppSharedLogic
 //
 //  Created by Viktor Jenei on 3/13/18.
@@ -9,12 +9,12 @@
 import Foundation
 
 public struct SpaceXLaunch : Codable {
-    var flightNumber : Int
-    var launchDateUTC : Date
-    var rocket : SpaceXRocket
-    var launchSite : SpaceXLaunchSite
-    var launchSuccess : Bool?
-    var links : SpaceXLinks
+    public var flightNumber : Int
+    public var launchDateUTC : String
+    public var rocket : SpaceXRocket
+    public var launchSite : SpaceXLaunchSite
+    public var launchSuccess : Bool?
+    public var links : SpaceXLinks
     
     enum CodingKeys: String, CodingKey {
         case flightNumber = "flight_number"
@@ -27,15 +27,28 @@ public struct SpaceXLaunch : Codable {
 }
 
 extension SpaceXLaunch {
-    static func from(JSONData data: Data) throws -> SpaceXLaunch {
+    public static func from(JSONData data: Data) throws -> SpaceXLaunch {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        // decoder.dateDecodingStrategy = .iso8601
         return try decoder.decode(SpaceXLaunch.self, from: data)
     }
 
     static func from(JSONData data: Data) throws -> [SpaceXLaunch] {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
+        // decoder.dateDecodingStrategy = .iso8601
         return try decoder.decode([SpaceXLaunch].self, from: data)
     }
+    
+    public func toJSONData() throws -> Data {
+        let encoder = JSONEncoder()
+        let JSONData = try encoder.encode(self)
+        return JSONData
+    }
 }
+
+extension SpaceXLaunch : Equatable {
+    public static func ==(lhs: SpaceXLaunch, rhs: SpaceXLaunch) -> Bool {
+        return lhs.flightNumber == rhs.flightNumber && lhs.launchDateUTC == rhs.launchDateUTC && lhs.rocket == rhs.rocket && lhs.launchSite == rhs.launchSite && lhs.launchSuccess == rhs.launchSuccess && lhs.links == rhs.links
+    }
+}
+

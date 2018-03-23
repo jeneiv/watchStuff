@@ -19,3 +19,9 @@ public struct SpaceXLaunchSite : Codable {
         case siteLongName = "site_name_long"
     }
 }
+
+extension SpaceXLaunchSite : Equatable {
+    public static func ==(lhs: SpaceXLaunchSite, rhs: SpaceXLaunchSite) -> Bool {
+        return lhs.siteID == rhs.siteID && lhs.siteName == rhs.siteName && lhs.siteLongName == rhs.siteLongName
+    }
+}

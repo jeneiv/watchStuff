@@ -17,3 +17,9 @@ public struct SpaceXLinks : Codable {
         case videoLink = "video_link"
     }
 }
+
+extension SpaceXLinks : Equatable {
+    public static func ==(lhs: SpaceXLinks, rhs: SpaceXLinks) -> Bool {
+        return lhs.missionPatch == rhs.missionPatch && lhs.videoLink == rhs.videoLink
+    }
+}

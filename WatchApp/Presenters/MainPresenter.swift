@@ -21,16 +21,33 @@ final class MainPresenter : NSObject {
         super.init()
     }
     
-    func promiseTest() {
-        firstly {
-            SpaceXLaunch.getUpcomingLaunches()
-        }
-        .done(on: DispatchQueue.main) { result in
-            print("Promise.done: \(result)")
+    func fetchNextLaunch() {
+        SpaceXLaunch.getUpcomingLaunches().done(on: DispatchQueue.main) { result in
+            // print("Promise.done: \(result)")
+            if let nextLaunch = result.first {
+                nextLaunch.saveToUserDefaults()
+                do {
+                    try UpcomingLaunchComplicationDataService.sendComplicationData(forNextLaunch: nextLaunch)
+                }
+                catch let e {
+                    print("AppDelegate - Error Sending Complication Data to watch: \(e)")
+                    WatchConnectivityService.sharedService.pendingComplicationData = nextLaunch
+                }
+                print("Next Launch Stored")
+            }
+            else {
+                print("No data for next launch")
+            }
         }
         .catch { error in
             print("Promise.catch: \(error)")
         }
+    }
+    
+    func fetchStoredNextLaunch() {
+        let storedNextLaunch = SpaceXLaunch.fromUserDefaults()
+        print("Stored Next Launch Data: \(String(describing: storedNextLaunch))")
+        self.view?.displayNextLaunch(launch: storedNextLaunch)
     }
     
     func sendLiftOffNotification() {

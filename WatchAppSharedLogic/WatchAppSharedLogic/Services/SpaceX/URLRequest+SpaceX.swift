@@ -17,8 +17,8 @@ extension URLRequest {
     private enum SpaceXEndpoint : String {
         case latest = "/v2/launches/latest"
         case all = "/v2/launches/all"
-        case upcoming = "/v2/launches/upcoming"
-        case pastLaunches = "v2/launches"
+        case upcoming = "/v2/launches/upcoming/?order=asc"
+        case pastLaunches = "/v2/launches"
     }
     
     static func upcomingLaunchesRequest() -> URLRequest {

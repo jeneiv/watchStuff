@@ -16,6 +16,7 @@ enum MainViewError {
 protocol MainView : class {
     func handleError(error : MainViewError)
     func presentNotification(withTitle title: String, withBody body: String)
+    func displayNextLaunch(launch: SpaceXLaunch?)
 }
 
 final class MainViewController : UIViewController {
@@ -42,8 +43,12 @@ final class MainViewController : UIViewController {
         }
     }
     
-    @IBAction func promiseButtonPressed(sender: UIButton) {
-        presenter.promiseTest()
+    @IBAction func checkStoredNextLaunchData(sender: UIButton) {
+        presenter.fetchStoredNextLaunch()
+    }
+    
+    @IBAction func fetchNextLaunchButtonPressed(sender: UIButton) {
+        presenter.fetchNextLaunch()
     }
 }
 
@@ -54,5 +59,11 @@ extension MainViewController : MainView {
     
     func presentNotification(withTitle title: String, withBody body: String) {
         print("New Notification: \(title), \(body)")
+    }
+    
+    func displayNextLaunch(launch: SpaceXLaunch?) {
+        let alert = UIAlertController(title: "Next Launch", message: launch != Optional.none ? "Flight num: \(launch!.flightNumber)" : "No Launch", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: Optional.none))
+        self.present(alert, animated: true, completion: Optional.none)
     }
 }

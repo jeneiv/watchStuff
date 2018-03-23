@@ -31,22 +31,23 @@ extension SpaceXLaunch {
     }
     
     public static func getUpcomingLaunches(inSession session: URLSession = URLSession.shared) -> Promise<[SpaceXLaunch]> {
-        return Promise { launch in
+        return Promise { launches in
             let request = URLRequest.upcomingLaunchesRequest()
             let dataTask = session.dataTask(with: request, completionHandler: { (data: Data?, urlResponse: URLResponse?, error: Error?) in
                 if let data = data {
                     do {
-                        try launch.fulfill(SpaceXLaunch.from(JSONData: data))
+                        try launches.fulfill(SpaceXLaunch.from(JSONData: data))
                     }
                     catch let e {
-                        launch.reject(e)
+                        launches.reject(e)
                     }
                 }
                 if let error = error {
-                    launch.reject(error)
+                    launches.reject(error)
                 }
             })
             dataTask.resume()
         }
     }
+    
 }

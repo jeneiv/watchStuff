@@ -12,7 +12,7 @@ import WatchConnectivity
 import WatchAppSharedLogic_watchOS
 
 final class MainInterfaceController : WKInterfaceController {
-    private var menuItems = ["starman", "send simple", "send with reply"]
+    private var menuItems = ["starman", "send simple", "send with reply", "check for launch"]
     
     @IBOutlet var menuTable: WKInterfaceTable!
     
@@ -54,6 +54,9 @@ extension MainInterfaceController {
             else if rowIndex == 2 {
                 self.sendMessgeToIPhone(withCompletion: true)
             }
+            else if rowIndex == 3 {
+                self.checkForStoredNextLaunch()
+            }
         }
     }
 }
@@ -94,6 +97,14 @@ private extension MainInterfaceController {
         else {
             print("Nor active, nor reachable")
         }
-
+    }
+    
+    private func checkForStoredNextLaunch() {
+        let storedNextLaunch = SpaceXLaunch.fromUserDefaults()
+        print("Stored Next Launch Data: \(String(describing: storedNextLaunch))")
+        let action = WKAlertAction(title: "ok", style: .cancel) {
+            print("ok")
+        }
+        presentAlert(withTitle: "Next Launch", message: storedNextLaunch != Optional.none ? "Flight num: \(storedNextLaunch!.flightNumber)" : "No Launch", preferredStyle: .alert, actions: [action])
     }
 }
