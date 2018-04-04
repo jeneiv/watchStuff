@@ -19,17 +19,14 @@ class FetchNextLaunchBackgroundTask {
                     let storedNextLaunch = SpaceXLaunch.fromUserDefaults()
                     if storedNextLaunch == Optional.none || nextLaunch != storedNextLaunch {
                         
-                        do {
-                            try UpcomingLaunchComplicationDataService.sendComplicationData(forNextLaunch: nextLaunch)
-                            nextLaunch.saveToUserDefaults()
-                        }
-                        catch let e {
-                            print("AppDelegate - Error Sending Complication Data to watch: \(e)")
-                            WatchConnectivityService.sharedService.pendingComplicationData = nextLaunch
-                        }
+                        FetchNextLaunchBackgroundTask.sendComplicationData(fetchResult, launch: nextLaunch)
+                        nextLaunch.saveToUserDefaults()
                         
                         print("Background Fetch -> New data")
-                        fetchResult.fulfill(.newData)
+                        
+                    }
+                    else if let storedLaunch = storedNextLaunch, storedLaunch.doesLauncheToday {
+                        FetchNextLaunchBackgroundTask.sendComplicationData(fetchResult, launch: storedLaunch)
                     }
                     else {
                         print("Background Fetch -> No data")
@@ -44,6 +41,18 @@ class FetchNextLaunchBackgroundTask {
             .catch({ (error : Error) in
                 fetchResult.fulfill(.failed)
             })
+        }
+    }
+    
+    private static func sendComplicationData(_ resolver: Resolver<UIBackgroundFetchResult>, launch: SpaceXLaunch) {
+        do {
+            try UpcomingLaunchComplicationDataService.sendComplicationData(forNextLaunch: launch)
+            resolver.fulfill(.newData)
+        }
+        catch let e {
+            print("AppDelegate - Error Sending Complication Data to watch: \(e)")
+            WatchConnectivityService.sharedService.pendingComplicationData = launch
+            resolver.fulfill(.failed)
         }
     }
 }

@@ -11,6 +11,7 @@ import Foundation
 public enum WatchAppState : Int {
     case main = 0
     case starMan
+    case launch
     
     public static let WatchAppStateKey = "WatchState"
     

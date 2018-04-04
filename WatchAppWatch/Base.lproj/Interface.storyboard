@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--Main-->
@@ -54,7 +54,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="164" y="360"/>
+            <point key="canvasLocation" x="34" y="632"/>
         </scene>
         <!--starman-->
         <scene sceneID="B2M-S7-dqo">
@@ -68,6 +68,28 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="343" y="29"/>
+        </scene>
+        <!--launch-->
+        <scene sceneID="HVb-Wp-9cI">
+            <objects>
+                <controller identifier="launch" id="Zgv-kN-Od3" customClass="LaunchInterfaceController" customModule="WatchAppWatch_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Flight Number" id="De7-VY-MEH"/>
+                        <label width="1" alignment="left" text=" N/A" textAlignment="left" id="n0q-Rx-0Xx">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label width="1" alignment="left" text="Local Date" id="WVm-Ns-3iP"/>
+                        <label width="1" alignment="left" text=" N/A" textAlignment="left" id="6fx-Uy-t1Z">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="dateLabel" destination="6fx-Uy-t1Z" id="CPK-wx-HZ8"/>
+                        <outlet property="flightNumberLabel" destination="n0q-Rx-0Xx" id="rWl-VY-RsZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="343" y="354"/>
         </scene>
     </scenes>
 </document>

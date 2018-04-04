@@ -27,6 +27,7 @@
 		156056C020406969003E958A /* WatchAppSharedLogic_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156056BF20406969003E958A /* WatchAppSharedLogic_watchOS.framework */; };
 		156056C120406969003E958A /* WatchAppSharedLogic_watchOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 156056BF20406969003E958A /* WatchAppSharedLogic_watchOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		15A1EDE720591E28006ED459 /* SpaceXLaunchComplicationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDE620591E28006ED459 /* SpaceXLaunchComplicationDataSource.swift */; };
+		15A9D1F3206D0D24001522E3 /* LaunchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A9D1F2206D0D24001522E3 /* LaunchInterfaceController.swift */; };
 		15AC737F203DA3ED00A234DE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AC737E203DA3ED00A234DE /* MainViewController.swift */; };
 		15F1BB3020655ECF00D0F931 /* FetchNextLaunchBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F1BB2F20655ECF00D0F931 /* FetchNextLaunchBackgroundTask.swift */; };
 		15F1BB3120655ECF00D0F931 /* FetchNextLaunchBackgroundTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F1BB2F20655ECF00D0F931 /* FetchNextLaunchBackgroundTask.swift */; };
@@ -134,6 +135,7 @@
 		157F47D920613B45007B4134 /* WatchAppWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchAppWatch Extension.entitlements"; sourceTree = "<group>"; };
 		15A1EDD1205807ED006ED459 /* WatchAppSharedLogic_watchOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchAppSharedLogic_watchOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/WatchApp-fwpfydqdmppoabbkfzwzgrncxtxb/Build/Products/Debug-iphoneos/WatchAppSharedLogic_watchOS.framework"; sourceTree = "<group>"; };
 		15A1EDE620591E28006ED459 /* SpaceXLaunchComplicationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunchComplicationDataSource.swift; sourceTree = "<group>"; };
+		15A9D1F2206D0D24001522E3 /* LaunchInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchInterfaceController.swift; sourceTree = "<group>"; };
 		15AC72EA203C564500A234DE /* WatchAppSharedLogic_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WatchAppSharedLogic_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15AC7362203C669700A234DE /* WatchAppSharedLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WatchAppSharedLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15AC7367203C672000A234DE /* WatchAppSharedLogic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WatchAppSharedLogic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +289,7 @@
 				155F79DD20370AFE00F12333 /* MainInterfaceController.swift */,
 				155F79DF203711EB00F12333 /* StarmanInterfaceController.swift */,
 				155F79E1203712D800F12333 /* MenuTableRow.swift */,
+				15A9D1F2206D0D24001522E3 /* LaunchInterfaceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 			files = (
 				15A1EDE720591E28006ED459 /* SpaceXLaunchComplicationDataSource.swift in Sources */,
 				155F79DE20370AFE00F12333 /* MainInterfaceController.swift in Sources */,
+				15A9D1F3206D0D24001522E3 /* LaunchInterfaceController.swift in Sources */,
 				155F79A8203705FE00F12333 /* ExtensionDelegate.swift in Sources */,
 				155F79E2203712D800F12333 /* MenuTableRow.swift in Sources */,
 				155F79E0203711EB00F12333 /* StarmanInterfaceController.swift in Sources */,

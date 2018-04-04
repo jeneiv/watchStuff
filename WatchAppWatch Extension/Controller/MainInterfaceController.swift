@@ -12,9 +12,9 @@ import WatchConnectivity
 import WatchAppSharedLogic_watchOS
 
 final class MainInterfaceController : WKInterfaceController {
-    private var menuItems = ["starman", "send simple", "send with reply", "check for launch"]
+    private var menuItems = ["next launch", "starman", "send simple", "send with reply", "check for launch"]
     
-    @IBOutlet var menuTable: WKInterfaceTable!
+    @IBOutlet weak var menuTable: WKInterfaceTable!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -46,15 +46,18 @@ extension MainInterfaceController {
     override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
         if table == menuTable {
             if rowIndex == 0 {
-                self.pushController(withName: "starman", context: Optional.none)
+                self.pushController(withName: "launch", context: Optional.none)
             }
             else if rowIndex == 1 {
-                self.sendMessgeToIPhone()
+                self.pushController(withName: "starman", context: Optional.none)
             }
             else if rowIndex == 2 {
-                self.sendMessgeToIPhone(withCompletion: true)
+                self.sendMessgeToIPhone()
             }
             else if rowIndex == 3 {
+                self.sendMessgeToIPhone(withCompletion: true)
+            }
+            else if rowIndex == 4 {
                 self.checkForStoredNextLaunch()
             }
         }

@@ -24,6 +24,7 @@ final class MainPresenter : NSObject {
     func fetchNextLaunch() {
         SpaceXLaunch.getUpcomingLaunches().done(on: DispatchQueue.main) { result in
             // print("Promise.done: \(result)")
+            
             if let nextLaunch = result.first {
                 nextLaunch.saveToUserDefaults()
                 do {

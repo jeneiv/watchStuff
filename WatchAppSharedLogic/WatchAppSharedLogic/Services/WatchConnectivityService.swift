@@ -8,6 +8,9 @@
 
 import Foundation
 import WatchConnectivity
+#if os(watchOS)
+    import ClockKit
+#endif
 
 public final class WatchConnectivityService : NSObject {
     public static let sharedService = WatchConnectivityService()
@@ -88,16 +91,24 @@ extension WatchConnectivityService : WCSessionDelegate {
     
     public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         print("WatchConnectivityService -> didReceiveUserInfo: \(userInfo)")
+        #if os(watchOS)
         if let nextLaunchData = userInfo[SpaceXLaunch.NextLaunchDataKey] as? Data {
             do {
                 let nextLaunch : SpaceXLaunch = try SpaceXLaunch.from(JSONData: nextLaunchData)
                 nextLaunch.saveToUserDefaults()
+                let complicationServer =  CLKComplicationServer.sharedInstance()
+                if let complications = complicationServer.activeComplications {
+                    complications.forEach({ (complication : CLKComplication) in
+                        complicationServer.reloadTimeline(for: complication)
+                    })
+                }
                 print("WatchConnectivityService -> Next Launch Data saved from received UserInfo")
             }
             catch let e {
                 print("WatchConnectivityService -> Cannot Decode Userinfo into SpaceXLaunch: \(e)")
             }
         }
+        #endif
     }
     
     public func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
