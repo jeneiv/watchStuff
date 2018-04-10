@@ -96,6 +96,8 @@ extension WatchConnectivityService : WCSessionDelegate {
             do {
                 let nextLaunch : SpaceXLaunch = try SpaceXLaunch.from(JSONData: nextLaunchData)
                 nextLaunch.saveToUserDefaults()
+                
+                // TODO: Decide if complication data refresh is really necessary here
                 let complicationServer =  CLKComplicationServer.sharedInstance()
                 if let complications = complicationServer.activeComplications {
                     complications.forEach({ (complication : CLKComplication) in

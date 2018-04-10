@@ -16,25 +16,21 @@ class SpaceXLaunchComplicationDataSource : NSObject, CLKComplicationDataSource {
     }
     
     func getSupportedTimeTravelDirections(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimeTravelDirections) -> Swift.Void) {
-        handler([.backward, .forward])
+        handler([.forward])
     }
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Swift.Void) {
         if complication.family == .circularSmall {
-            let template = CLKComplicationTemplateCircularSmallRingImage()
-            template.ringStyle = .closed
-            
             if let storedNextLaunch = SpaceXLaunch.fromUserDefaults(), storedNextLaunch.doesLauncheToday {
+                let template = CLKComplicationTemplateCircularSmallRingImage()
+                template.ringStyle = .closed
                 template.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "RocketFlying")!)
                 template.fillFraction = storedNextLaunch.complicationFillFraction
                 let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
                 handler(timelineEntry)
             }
             else {
-                template.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "RocketStanding")!)
-                template.fillFraction = 0.0
-                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-                handler(timelineEntry)
+                handler(self.emptyLaunchComplicationCircularSmallTimelineEntry())
             }
 
         }
@@ -48,27 +44,41 @@ class SpaceXLaunchComplicationDataSource : NSObject, CLKComplicationDataSource {
     }
     
     func getTimelineAnimationBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineAnimationBehavior) -> Void) {
-        handler(CLKComplicationTimelineAnimationBehavior.always)
+        handler(CLKComplicationTimelineAnimationBehavior.never)
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
         if complication.family == .circularSmall {
-            let template = CLKComplicationTemplateCircularSmallRingImage()
-            template.ringStyle = .closed
-            
-            if let storedNextLaunch = SpaceXLaunch.fromUserDefaults(), storedNextLaunch.doesLaunch(atDate: date) {
-                template.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "RocketFlying")!)
-                template.fillFraction = storedNextLaunch.complicationFillFraction(atDate: date)
-                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-                handler([timelineEntry])
+            if limit > 0, let storedNextLaunch = SpaceXLaunch.fromUserDefaults(), let storedLaunchDate = storedNextLaunch.localLaunchDate, storedNextLaunch.doesLaunch(atDate: date), storedLaunchDate > date {
+                let difference = storedLaunchDate.timeIntervalSince(date)
+                let limit = limit <= 24 ? limit : 24
+
+                let proportion = difference / Double(limit)
+                var entries = [CLKComplicationTimelineEntry]()
+                for i in 0..<(limit - 1) {
+                    let entryDate = Date(timeIntervalSinceNow: (Double(i) * proportion))
+                    if entryDate < storedLaunchDate {
+                        entries.append(storedNextLaunch.circularSmallTimelineEntry(atDate: entryDate))
+                    }
+                }
+                
+                entries.append(self.emptyLaunchComplicationCircularSmallTimelineEntry(forDate: storedLaunchDate))
+                handler(entries)
             }
             else {
-                template.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "RocketStanding")!)
-                template.fillFraction = 0.0
-                let timelineEntry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
-                handler([timelineEntry])
+                handler([self.emptyLaunchComplicationCircularSmallTimelineEntry()])
             }
         }
         handler(Optional.none)
+    }
+}
+
+extension SpaceXLaunchComplicationDataSource {
+    private func emptyLaunchComplicationCircularSmallTimelineEntry(forDate date: Date = Date()) -> CLKComplicationTimelineEntry {
+        let template = CLKComplicationTemplateCircularSmallRingImage()
+        template.ringStyle = .closed
+        template.imageProvider = CLKImageProvider(onePieceImage: UIImage(named: "RocketStanding")!)
+        template.fillFraction = 0.0
+        return CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
     }
 }

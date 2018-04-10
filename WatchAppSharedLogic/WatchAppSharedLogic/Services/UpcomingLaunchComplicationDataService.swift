@@ -35,7 +35,12 @@ final public class UpcomingLaunchComplicationDataService {
             throw ComplicationDataError.ComplicationTransferLimitExceeded
         }
         
+        // Debug
+        // var nextLaunch = nextLaunch
+        // nextLaunch.launchDateUTC = "2018-04-10T15:32:00Z"
+
         let launchJSONData = try nextLaunch.toJSONData()
+        
         wcSession.transferCurrentComplicationUserInfo([SpaceXLaunch.NextLaunchDataKey : launchJSONData])
         print("UpcomingLaunchComplicationDataService - Complication Data Sent")
     }

@@ -12,6 +12,7 @@
 		153415A120627E9F00898389 /* SpaceXLaunch+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1534159E20627E9F00898389 /* SpaceXLaunch+UserDefaults.swift */; };
 		153415A62062939600898389 /* UpcomingLaunchComplicationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153415A52062939600898389 /* UpcomingLaunchComplicationDataService.swift */; };
 		153415A72062939600898389 /* UpcomingLaunchComplicationDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153415A52062939600898389 /* UpcomingLaunchComplicationDataService.swift */; };
+		155DD722207CCED700377327 /* SpaceXLaunch+CLKComplicationTimelineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155DD721207CCED700377327 /* SpaceXLaunch+CLKComplicationTimelineEntry.swift */; };
 		15A1EDC42057F054006ED459 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */; };
 		15A1EDC52057F054006ED459 /* SpaceXLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */; };
 		15A1EDC92057F47F006ED459 /* URLRequest+SpaceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */; };
@@ -56,6 +57,7 @@
 		0F4DF7628220B66507EBCB83 /* Pods-WatchAppSharedLogic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchAppSharedLogic.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-WatchAppSharedLogic/Pods-WatchAppSharedLogic.debug.xcconfig"; sourceTree = "<group>"; };
 		1534159E20627E9F00898389 /* SpaceXLaunch+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpaceXLaunch+UserDefaults.swift"; sourceTree = "<group>"; };
 		153415A52062939600898389 /* UpcomingLaunchComplicationDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchComplicationDataService.swift; sourceTree = "<group>"; };
+		155DD721207CCED700377327 /* SpaceXLaunch+CLKComplicationTimelineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpaceXLaunch+CLKComplicationTimelineEntry.swift"; sourceTree = "<group>"; };
 		15A1EDC32057F054006ED459 /* SpaceXLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXLaunch.swift; sourceTree = "<group>"; };
 		15A1EDC82057F47F006ED459 /* URLRequest+SpaceX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+SpaceX.swift"; sourceTree = "<group>"; };
 		15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpaceXLaunch+Promises.swift"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				15A1EDDD2058180F006ED459 /* SpaceXLinks.swift */,
 				15A1EDD220580F72006ED459 /* SpaceXLaunch+Promises.swift */,
 				1534159E20627E9F00898389 /* SpaceXLaunch+UserDefaults.swift */,
+				155DD721207CCED700377327 /* SpaceXLaunch+CLKComplicationTimelineEntry.swift */,
 			);
 			path = SpaceX;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15AC737C203C682300A234DE /* WatchConnectivityService.swift in Sources */,
+				155DD722207CCED700377327 /* SpaceXLaunch+CLKComplicationTimelineEntry.swift in Sources */,
 				153415A120627E9F00898389 /* SpaceXLaunch+UserDefaults.swift in Sources */,
 				15A1EDDC20581718006ED459 /* SpaceXLaunchSite.swift in Sources */,
 				15A1EDD8205815F3006ED459 /* SpaceXRocket.swift in Sources */,

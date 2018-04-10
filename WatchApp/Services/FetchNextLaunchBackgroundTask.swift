@@ -16,6 +16,7 @@ class FetchNextLaunchBackgroundTask {
         return Promise { fetchResult in
             SpaceXLaunch.getUpcomingLaunches().done({ (result : [SpaceXLaunch]) in
                 if let nextLaunch = result.first {
+                    
                     let storedNextLaunch = SpaceXLaunch.fromUserDefaults()
                     if storedNextLaunch == Optional.none || nextLaunch != storedNextLaunch {
                         
