@@ -2,13 +2,13 @@
   "images" : [
     {
       "idiom" : "watch",
-      "filename" : "complication_rocket_standing_38x38.png",
+      "filename" : "complication_rocket_standing_32x32.png",
       "screen-width" : "<=145",
       "scale" : "2x"
     },
     {
       "idiom" : "watch",
-      "filename" : "complication_rocket_standing_42x42.png",
+      "filename" : "complication_rocket_standing_36x36.png",
       "screen-width" : ">145",
       "scale" : "2x"
     }
