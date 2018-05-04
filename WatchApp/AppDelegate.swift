@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         print("Background Fetch -> Start")
+        let _ = WatchConnectivityService.sharedService
         FetchNextLaunchBackgroundTask.fetchNextLaunch().done { (backgroundfetchResult : UIBackgroundFetchResult) in
             completionHandler(backgroundfetchResult)
         }

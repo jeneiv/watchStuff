@@ -39,8 +39,22 @@ class SpaceXLaunchComplicationDataSource : NSObject, CLKComplicationDataSource {
         }
     }
     
+    func getTimelineStartDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
+        if let nextLaunchDate = SpaceXLaunch.fromUserDefaults()?.localLaunchDate {
+            handler(Calendar.current.startOfDay(for: nextLaunchDate))
+        }
+        handler(Optional.none)
+    }
+    
     func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-        handler(SpaceXLaunch.fromUserDefaults()?.localLaunchDate)
+        if let nextLaunchDate = SpaceXLaunch.fromUserDefaults()?.localLaunchDate {
+            // Timeline Entry Expires 1 hour after launch
+            let expireData = nextLaunchDate.addingTimeInterval(60.0 * 60.0)
+            handler(expireData)
+        }
+        else {
+            handler(Optional.none)
+        }
     }
     
     func getTimelineAnimationBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineAnimationBehavior) -> Void) {
